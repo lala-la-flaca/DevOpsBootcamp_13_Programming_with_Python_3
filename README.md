@@ -38,7 +38,7 @@ Write a Python application that interacts with GitLab’s API to list all public
    ```
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_3/blob/main/Img/saving%20resposne%20form%20api.PNG" width=800 />
    
-5. Parse the response as JSON.
+5. Decode the JSON response into a Python object.
     ```bash
     my_projects =  response.json()
    ```

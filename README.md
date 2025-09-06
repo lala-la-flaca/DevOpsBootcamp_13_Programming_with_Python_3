@@ -12,7 +12,9 @@ Write a Python application that interacts with GitLab’s API to list all public
   
 # 🎯 Features
 ✅ Sends requests to GitLab’s API.
+
 📡 Retrieves public repositories for a given user.
+
 📋 Displays repository names in the console
 
 # 🏗 Project Architecture
@@ -23,33 +25,35 @@ Write a Python application that interacts with GitLab’s API to list all public
    ```bash
    pip install requests
    ```
-   <img src="" />
-   
 3. Import the requests module to work with HTTP.
    ```bash
    import requests
    ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_3/blob/main/Img/importing%20module.PNG" width=800 />
    
 4. Call the GitLab API and save the response.
    
     ```bash
-
+    response = requests.get("https://gitlab.com/api/v4/users/techworld-with-nana/projects")
    ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_3/blob/main/Img/saving%20resposne%20form%20api.PNG" width=800 />
    
 5. Parse the response as JSON.
     ```bash
-  
+    my_projects =  response.json()
    ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_3/blob/main/Img/parsin%20reponse%20to%20json.PNG" width=800 />
    
 6. Iterate through the response to obtain the public repositories.
     ```bash
-      
+    for project in my_projects:
+      project_name = project["name"]
+      print(f"Project name: {project_name}")
+      project_url = project["web_url"]
+      print(f"Project URL: {project_url}")
    ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_3/blob/main/Img/getting%20porject.PNG" width=800 />
    
 10. Output the results.
 
-    <img src="" width=800/>
+    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_13_Programming_with_Python_3/blob/main/Img/results.PNG" width=800/>

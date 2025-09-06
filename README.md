@@ -1,7 +1,7 @@
 # 🐍Module 13 – Programming with Python
 This exercise is part of Module 13: Programming with Python, module introduces Python programming fundamentals through three hands-on demo projects. Each demo focuses on solving a different type of problem: a countdown application, automation with spreadsheets, and interacting with an external API.
 
-# 📦Demo 3 – API request to Gitlab
+# 📦Demo 3 – API Request to Gitlab
 # 📌 Objective
 Write a Python application that interacts with GitLab’s API to list all public repositories for a specified user.
 
